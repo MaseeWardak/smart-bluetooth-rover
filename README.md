@@ -1,4 +1,4 @@
-# Arduino Autonomous Car with Phone-Controlled Ackerman Steering
+# Arduino Autonomous Car with Phone-Controlled Steering
 
 ## Project Overview
 This project is an arduino-based car featuring RC-Control and autonomous navigation using ultrasonic sensors. It has a custom built steering system and a chassis designed in tinkercad and laser-cut. The main goal of this project was to explore the fundamentals of embedded systems, motor control, and sensor integration while developing a functional prototype that demonstrates practical robotics concepts.
@@ -24,7 +24,7 @@ This project is an arduino-based car featuring RC-Control and autonomous navigat
 - **Chassis Design and Assembly (~10 hours)**:
   - Designed chassis in Tinkercad for 1/8-inch plywood, incorporating two DC motors, wheels, Arduino Uno, L298N, HC-05, and two 9V batteries (one for motors/L298N, one for Arduino).
   - Laser-cut chassis and assembled prototype one for basic phone-controlled forward/backward movement.
-- **Ackerman Steering Mechanism (~15 hours)**:
+- **Steering Mechanism (~15 hours)**:
   - Iterated three steering designs over one week:
     - **Attempt 1**: Metal rods in wire coating glued to chassis sides; failed due to weak support.
     - **Attempt 2**: Rods through chassis holes; failed due to thin chassis instability.
