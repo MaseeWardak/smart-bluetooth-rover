@@ -65,7 +65,7 @@ This project is an arduino-based rover featuring RC-Control and automatic brakin
 - **Steering Mechanism**: A short video of how the steering works:
   - [Steering](https://youtu.be/WgILMfuBC3A)
 - **Prototype 1 photos**: Images of the initial chassis with 9V batteries and basic phone control.
-  - [Prototype 1](https://github.com/MaseeWardak/smart-bluetooth-rover/media)
+  - [Prototype 1](media)
 - **Phone control video**: Demonstrates steering via smartphone, mimicking real car dynamics.
   - [Video Link](https://youtube.com/phone-control-video)
 - **Autonomous mode video**: Shows obstacle avoidance and rocking motion in action.
