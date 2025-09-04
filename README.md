@@ -11,7 +11,7 @@ This project is an arduino-based rover featuring RC-Control and automatic brakin
 
 ## Components
 - **Microcontroller**: Arduino Uno R3
-- **Motors**: 2x DC motors (3-12V, 25,000 RPM) for movement
+- **Motors**: 2x DC motors (3-12V, 25000 RPM) for movement
 - **Motor driver**: L298N dual H-bridge for motor control
 - **Servo**: MG90S micro servo for steering
 - **Sensors**: 2x HC-SR04 ultrasonic sensors (1 front, 1 Back) for obstacle detection
@@ -26,13 +26,13 @@ This project is an arduino-based rover featuring RC-Control and automatic brakin
   - Assembled a prototype which had basic phone-controlled forward/backward movement.
 - **Steering mechanism**:
   - Created three steering designs over one week:
-    - **First attempt**: Metal rods in wire coating glued to chassis sides; failed due to weak support, wire coating was unstable.
-    - **Second attempt**: Rods through chassis holes; failed due to thin chassis instability, the chassis itself is only 1/8' thick plywood so it could not hold the tires in a stable position.
-    - **Final design**: Standalone mechanism using round plywood pieces, hot glue, and plywood. Linked wheels with a bent needle driven by MG90S servo, screwed to chassis. Success!
-  - Programmed servo for proportional steering via phone inputs, achieving ±5° accuracy.
+    - **First attempt**: Metal rods in wire coating glued to chassis sides. This failed due to weak support, wire coating was unstable.
+    - **Second attempt**: Rods through chassis holes. This failed due to thin chassis instability, the chassis itself is only 1/8' thick plywood so it could not hold the tires in a stable position.
+    - **Final design**: Standalone mechanism using round plywood pieces, hot glue, and plywood. Linked wheels with a bent needle driven by MG90S servo and then screwed it to chassis. Success!
+  - Programmed servo for proportional steering via phone inputs.
 - **Power system optimization**:
   - Initial 9V batteries overheated within 10 seconds.
-  - Tested 7.4V 3000mAh 25C LiPo battery; unfortunetly thet were too heavy and caused motor connector pin failure due to high current (25c discharge rate could damage the L298n too, very unpractical).
+  - Tested 7.4V 3000mAh 25C LiPo battery.Uunfortunetly thet were too heavy and caused motor connector pin failure due to high current (25c discharge rate could damage the L298n too, very unpractical).
   - Switched to two 18650 batteries, these batteries work perfectly and offer an excellent runtime.
 - **Phone-controlled functionality**:
   - Integrated HC-05 Bluetooth module with Arduino Bluetooth Controller app for forward/backward movement and steering.
@@ -52,7 +52,7 @@ This project is an arduino-based rover featuring RC-Control and automatic brakin
    - **Problem**: Initial designs (wire coating, chassis holes) lacked stability for steering.
    - **Solution**: Built a standalone mechanism with plywood and rods, using a servo-driven bent needle for precise wheel linkage, screwed to the chassis.
 2. **Battery overheating and weight**:
-   - **Problem**: 9V batteries overheated; 25C LiPo was heavy and caused motor pin failure.
+   - **Problem**: The 9V batteries overheated and the 25C LiPo battery was heavy and caused motor pin failure.
    - **Solution**: Adopted two 18650 batteries for lightweight, rechargeable power, with PPTC fuses and PWM to manage current.
 3. **Bluetooth control**:
    - **Problem**: Mobile app supports one command at a time, making movement and steering impossible at the same time.
@@ -68,8 +68,7 @@ This project is an arduino-based rover featuring RC-Control and automatic brakin
   - [Prototype 1](media)
 - **Phone control video**: Demonstrates steering via smartphone, mimicking real car dynamics.
   - [Video Link](https://youtube.com/phone-control-video)
-- **Autonomous mode video**: Shows obstacle avoidance and rocking motion in action.
-  - [Video Link](https://youtube.com/autonomous-video) *(To be uploaded)*
+- **Au**: Sho
 
 ## Code
 The full Arduino code is available in this repository:
