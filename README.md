@@ -1,11 +1,11 @@
-# Arduino Rover with Phone-Controlled Steering
+# Arduino Smart Rover
 
 ## Project Overview
 This project is an arduino-based rover featuring RC-Control and automatic braking using ultrasonic sensors. It has a custom built steering system and a chassis designed in tinkercad and laser-cut. The main goal of this project was to explore the fundamentals of embedded systems, motor control, and sensor integration while developing a functional prototype that demonstrates practical robotics concepts.
 
 ## Features
 - **Phone Controlled Steering**: Using a smartphone app via Bluetooth (HC-05 module) to control an MG90S servo, achieving realistic car-like steering with a custom steering mechanism made from home materials.
-- **Autonomous Navigation**: Attempted, not practical with current setup. Better hardware required.
+- **Obstacle Detection**: Using two ultra-sonic sensors, the rover can detect obstacles within a 19cm range and brake before collision.
 - **Optimized Power System**: Powered by two 18650 batteries (7.4V, 3000mAh), refined from initial 9V and 25C LiPo batteries for weight and reliability.
 - **High Speed Performance**: Driven by two 25,000 RPM DC motors (3-12V) with an L298N driver for fast, responsive movement.
 
@@ -23,7 +23,7 @@ This project is an arduino-based rover featuring RC-Control and automatic brakin
 ## Development Timeline
 - **Chassis Design and Assembly**:
   - Designed the rover in Tinkercad, multiple prototypes were designed. The chassis was then laser-cut using plywood.
-  - Assembled prototype one which had basic phone-controlled forward/backward movement.
+  - Assembled a prototype which had basic phone-controlled forward/backward movement.
 - **Steering Mechanism**:
   - Created three steering designs over one week:
     - **Attempt 1**: Metal rods in wire coating glued to chassis sides; failed due to weak support, wire coating was unstable.
@@ -49,16 +49,16 @@ This project is an arduino-based rover featuring RC-Control and automatic brakin
 
 ## Challenges and Solutions
 1. **Steering Mechanism Failures**:
-   - **Issue**: Initial designs (wire coating, chassis holes) lacked stability for Ackerman steering.
+   - **Problem**: Initial designs (wire coating, chassis holes) lacked stability for steering.
    - **Solution**: Built a standalone mechanism with plywood and rods, using a servo-driven bent needle for precise wheel linkage, screwed to the chassis.
 2. **Battery Overheating and Weight**:
-   - **Issue**: 9V batteries overheated; 25C LiPo was heavy and caused motor pin failure.
+   - **Problem**: 9V batteries overheated; 25C LiPo was heavy and caused motor pin failure.
    - **Solution**: Adopted two 18650 batteries for lightweight, rechargeable power, with PPTC fuses and PWM to manage current.
 3. **Bluetooth Control**:
-   - **Issue**: Mobile app supports one command at a time, making movement and steering impossible at the same time.
+   - **Problem**: Mobile app supports one command at a time, making movement and steering impossible at the same time.
    - **Solution**: Updated Arduino code to work using a toggle based system, with a debounce delay timer that stops repeated commands to avoid jittering.
 4. **High Motor Speed Control**:
-   - **Issue**: 25,000 RPM motors caused instability at full power.
+   - **Problem**: 25,000 RPM motors caused instability at full power.
    - **Solution**: Used PWM via L298N to regulate speed and protect components.
 
 ## Media
