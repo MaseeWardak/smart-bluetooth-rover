@@ -62,9 +62,11 @@ This project is an arduino-based rover featuring RC-Control and automatic brakin
    - **Solution**: Used PWM via L298N to regulate speed and protect components.
 
 ## Media
+- **Steering Mechanism**: A short video of how the steering works:
+  - [Steering](https://youtu.be/WgILMfuBC3A)
 - **Prototype 1 photos**: Images of the initial chassis with 9V batteries and basic phone control.
   - [Prototype 1](https://github.com/yourusername/arduino-car/raw/main/images/prototype1.jpg)
-- **Phone control video**: Demonstrates Ackerman steering via smartphone, mimicking real car dynamics.
+- **Phone control video**: Demonstrates steering via smartphone, mimicking real car dynamics.
   - [Video Link](https://youtube.com/phone-control-video)
 - **Autonomous mode video**: Shows obstacle avoidance and rocking motion in action.
   - [Video Link](https://youtube.com/autonomous-video) *(To be uploaded)*
