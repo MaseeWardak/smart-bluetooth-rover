@@ -67,7 +67,7 @@ This project is an arduino-based rover featuring RC-Control and automatic brakin
 
 ## Code
 The full Arduino code is available in this repository:
-- [Main Sketch](https://github.com/MaseeWardak/arduino-rover/blob/main/Code/Ultrasonic.BluetoothCodeByMasee.ino)
+- [Main Sketch](https://github.com/MaseeWardak/smart-bluetooth-rover/blob/main/Code/Ultrasonic.BluetoothCodeByMasee.ino)
 
 ## Future improvements
 - Self driving rover.
