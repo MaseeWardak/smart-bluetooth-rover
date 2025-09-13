@@ -1,3 +1,6 @@
+// Created by Masee! The code functions as intended, if you want a homemade bluetooth car then this is what you
+need to upload to your Arduino!
+
 #include <Servo.h>
 #include <SoftwareSerial.h>
 
