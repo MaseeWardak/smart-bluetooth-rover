@@ -60,10 +60,12 @@ This project is an arduino-based rover featuring RC-Control and automatic brakin
 ## Media
 - **Steering Mechanism**: A short video of how the steering works:
   - [Steering](https://youtu.be/WgILMfuBC3A)
-- **Prototype 1 photos**: Images of the initial chassis with 9V batteries and basic phone control.
+- **Photos**: Images of the Rover throughout different times.
   - [Prototype 1](media)
 - **Phone control video**: Demonstrates steering via smartphone, mimicking real car dynamics.
   - [Video Link](https://youtube.com/phone-control-video)
+- **Brake Test**: Short video featuring the Ultra-sonic brakes:
+  - [Video Link](https://youtu.be/QtTpKWQm3Ik)
 
 ## Code
 The full Arduino code is available in this repository:
