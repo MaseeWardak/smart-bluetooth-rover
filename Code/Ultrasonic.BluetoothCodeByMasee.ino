@@ -24,7 +24,6 @@ int distance2;
 Servo myservo;
 
 // Defining HC-05 and commands related to it
-SoftwareSerial bluetoothSerial(2, 3); // RX, TX
 char bluetooth;
 
 // Tracking the state:
@@ -39,14 +38,14 @@ const unsigned long debounceDelay = 100;
 
 // Move forward function:
 void moveForward(){
-  analogWrite(ENA, 240);
+  analogWrite(ENA, 255);
   digitalWrite(IN1, LOW);
   digitalWrite(IN2, HIGH);
 }
 
 // Move Backwards Function:
 void moveBackward(){
-  analogWrite(ENA, 240);
+  analogWrite(ENA, 255);
   digitalWrite(IN1, HIGH);
   digitalWrite(IN2, LOW);
 }
@@ -66,7 +65,7 @@ void stopCar(){
 
 //Ultra-sonic Brake Function:
 void brake(){
-  if (distance <= 20){
+  if (distance <= 35){
     if (movingForward == true) {
       // If osbtacle is in the front, reverse a bit to kill momentum and stop.
       movingForward = false;
@@ -74,7 +73,7 @@ void brake(){
       delay(350);
       stopCar();
   }}
-  if (distance2 <= 20) {
+  if (distance2 <= 35) {
     if (movingBackward == true) {
       // If obstacle is in the back, go forward a bit to kill momentum and stop.
       movingBackward = false;
@@ -88,7 +87,7 @@ void setup() {
   // Declaring outputs/inputs:
   myservo.attach(9);
   centerServo();
-  bluetoothSerial.begin(9600);
+  Serial.begin(9600);
   pinMode(ENA, OUTPUT);
   pinMode(IN1, OUTPUT);
   pinMode(IN2, OUTPUT);
@@ -125,8 +124,8 @@ void loop() {
 
   // This part makes the car move and steer, the car moves forward/backward -
   // on the press of a button and will not stop until the button is pressed again:
-  if (bluetoothSerial.available() > 0){
-    bluetooth = bluetoothSerial.read(); // This line checks if there is a signal available, if it is, it will be assigned to bluetooth. 
+  if (Serial.available() > 0){
+    bluetooth = Serial.read(); // This line checks if there is a signal available, if it is, it will be assigned to bluetooth. 
     if (millis() - lastcommandTimer >= debounceDelay) {
       lastcommandTimer = millis(); // This line of code adds a 210ms delay between presses by introducing a debounce delay, it checks if
       // millis() - lastcommandTimer is greater than or equal to the debounce delay. If it is, then it will initiate the rest of the code that follows.
