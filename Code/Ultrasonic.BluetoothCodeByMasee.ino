@@ -20,7 +20,7 @@ long duration2;
 int distance;
 int distance2;
 
-// Defining MGS90 Pin
+// Servo MGS90 Pin 
 Servo myservo;
 
 // Defining HC-05 and commands related to it
@@ -85,6 +85,7 @@ void brake(){
 
 void setup() {
   // Declaring outputs/inputs:
+  //Attached micro servo to pin 9
   myservo.attach(9);
   centerServo();
   Serial.begin(9600);
@@ -110,7 +111,7 @@ void loop() {
   // Converting duration to distance:
   distance = (duration*.0343)/2; 
 
-// Sensor #2:
+// Same process for Sensor #2 (Back sensor):
   digitalWrite(trigPin2, LOW);
   delayMicroseconds(2);
   digitalWrite(trigPin2, HIGH);
