@@ -25,37 +25,26 @@ This project is an arduino-based rover featuring RC-Control and automatic brakin
   - Designed the rover in Tinkercad, multiple prototypes were designed. The chassis was then laser-cut using plywood.
   - Assembled a prototype which had basic phone-controlled forward/backward movement.
 - **Steering mechanism**:
-  - I created three steering designs over one week:
+  - Created three steering designs over one week:
     - **First attempt**: Metal rods in wire coating glued to chassis sides. This failed due to weak support, wire coating was unstable.
     - **Second attempt**: Rods through chassis holes. This failed due to the thin chassis, the chassis itself is only 1/8' thick plywood so it could not hold the tires in a stable position.
     - **Final design**: Standalone mechanism using round plywood pieces, hot glue, and plywood. Linked wheels with a bent needle driven by MG90S servo and then screwed it to chassis. Success!
 - **Power system optimization**:
   - Initial 9V batteries that I was using overheated within 10 seconds.
-  - I tested 7.4V 3000mAh 25C LiPo battery. Uunfortunetly they were too heavy and caused motor connector pin failure due to high current (25c discharge rate could damage the L298n too, very unpractical).
-  - I awitched to two 18650 batteries, these batteries work perfectly and offer an excellent runtime.
+  - I tested 7.4V 3000mAh 25C LiPo battery. Unfortunetly they were too heavy and caused motor connector pin failure due to high current (25c discharge rate could damage the L298n too, very unpractical).
+  - I switched to two 18650 batteries, these batteries work perfectly and offer an excellent runtime.
 - **Phone-controlled functionality**:
-  - I used HC-05 Bluetooth module with Arduino Bluetooth Controller app for forward/backward movement and steering.
+  - Used an HC-05 Bluetooth module with Arduino Bluetooth Controller app for forward/backward movement and steering.
   - Initial code did not work as intended, because the bluetooth controller app could not send two signals simultaneously, so I implemented a toggle-based control system.
   - Toggle-based control was jittery, because the application sent multiple commands with a single press. To avoid this, I added debounce delay which makes the rover ignore repeated commands within a defined timeframe.
 - **Automatic braking**:
-  - I implemented a smart braking algorithm, which stops the rover when the ultrasonic sensors detect an obstacle in a specific range.
+  - Implemented a smart braking algorithm, which stops the rover when the ultrasonic sensors detect an obstacle in a specific range.
   - Due to the high speed motors of the rover, the rover will move in the opposite direction for a short time inorder to stop in time.
 - **Testing and debugging**:
-  - I debugged steering failures, battery overheating, and programming bugs.
-  - I tested phone control, steering accuracy, and other systems of the rover.
+  - Debugged steering failures, battery overheating, and programming bugs.
+  - Tested phone control, steering accuracy, and other systems of the rover.
 - **Documentation and media**:
-  - I created Tinkercad schematics, documented code, and captured prototype photos and videos.
-
-## Challenges and solutions
-1. **Steering mechanism failures**:
-   - **Problem**: The initial designs (wire coating, chassis holes) lacked stability for steering.
-   - **Solution**: I built a standalone mechanism with plywood and glue sticks, using a bent needle for precise wheel linkage, and then screwed it to the chassis.
-2. **Battery overheating and weight**:
-   - **Problem**: The 9V batteries overheated and the 25C LiPo battery was heavy and caused motor pin failure.
-   - **Solution**: I adopted two 18650 batteries (7.4v) for lightweight, rechargeable power.
-3. **Bluetooth control**:
-   - **Problem**: The mobile app only supports one command at a time, which makes movement and steering impossible at the same time.
-   - **Solution**: I updated the Arduino code to work using a toggle based system, with a debounce delay timer that stops repeated commands to avoid jittering.
+  - Created Tinkercad schematics, documented code, and captured prototype photos and videos.
 
 ## Media
 - **Steering Mechanism**: A short video of how the steering works:
@@ -74,13 +63,6 @@ The full Arduino code is available in this repository:
 ## Future improvements
 - Self driving rover.
 - This project was made prior to having deep experience with C++, using loops could be very beneficial, which is something I intend to do in the future.
-
-## Skills demonstrated
-- **CAD design**: I Designed the chassis in Tinkercad for laser cutting.
-- **Embedded systems**: Programmed Arduino for motor control, sensor integration, and Bluetooth communication.
-- **Mechanical sesign**: Iterated steering mechanism for real-car-like dynamics.
-- **Problem-solving**: Addressed steering, power, and navigation challenges through iterative design.
-- **Self-learning**: Developed all skills independently before university coursework.
 
 ## Contact
 For questions or collaboration, reach me at maseehwardak5@gmail.com or www.linkedin.com/in/maseehullah-wardak-8244ba319
